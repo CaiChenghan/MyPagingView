@@ -1,0 +1,6 @@
+module Pods_MyPagingView {
+  umbrella header "Pods-MyPagingView-umbrella.h"
+
+  export *
+  module * { export * }
+}
