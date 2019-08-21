@@ -1,1 +1,1 @@
-/Users/caichenghan/Desktop/MyPagingView/Pods/Target Support Files/SnapKit/SnapKit-umbrella.h
+../../../Target Support Files/SnapKit/SnapKit-umbrella.h

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F4612FEB864011241DA9E36D90370E41"
+               BlueprintIdentifier = "F81A5E274F6E0689DEDC63F0F73D2DCA"
+               BuildableName = "libPods-MyPagingView.a"
                BlueprintName = "Pods-MyPagingView"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-MyPagingView.a">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

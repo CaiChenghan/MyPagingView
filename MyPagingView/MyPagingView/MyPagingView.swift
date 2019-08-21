@@ -28,7 +28,9 @@ class MyPagingView: UIView {
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
+#if DEBUG
         collectionView.decelerationRate = UIScrollView.DecelerationRate(rawValue: 0.1)
+#endif
         collectionView.register(MyPagingCell.self, forCellWithReuseIdentifier: "MyPagingCell")
         return collectionView
     }()
@@ -128,12 +130,14 @@ extension MyPagingView: UICollectionViewDataSource {
 
 extension MyPagingView: UICollectionViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+#if DEBUG
         let point = self.convert(CGPoint(x: layout.itemWidth/2.0, y: collectionView.center.y), to: collectionView)
         let indexPath = collectionView.indexPathForItem(at: point)
         let tpIndex = indexPath?.row ?? 0
         let targetIndex = tpIndex%(data?.count ?? 1)
         self.index = targetIndex
         scrollToRollAtIndex(index: repeatCount/2*(data?.count ?? 0) + index)
+#endif
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

@@ -9,11 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    
     
     lazy var pagingView: MyPagingView = {
         let view = MyPagingView()
+#if DEBUG
+        view.repeatCount = 30
+#else
+        view.repeatCount = 1
+#endif
         return view
     }()
     
@@ -22,8 +25,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         initialView()
         makeConstraints()
-        pagingView.setDataWithIndex(data: ["零","壹","贰"], index: 0)
-        
+        pagingView.setDataWithIndex(data: ["0","1","2","3","4","5","6","7","8","9"], index: 0)
     }
 
     func initialView() {
